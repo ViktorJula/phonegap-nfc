@@ -29,6 +29,15 @@ function handleNfcFromIntentFilter() {
 
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
 console.log("Execution test 1");
+try{
+    if(location.href.indexOf("/_error.html?") > -1)
+    {
+        localStorage.clear();
+    }
+}
+catch (e){
+    console.log(e);
+}
 
 var ndef = {
 
