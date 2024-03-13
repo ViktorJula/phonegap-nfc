@@ -15,7 +15,6 @@ function handleNfcFromIntentFilter() {
                 cordova.exec(
                     function () {
                         console.log("Initialized the NfcPlugin");
-                        console.log("Execution test 2");
                     },
                     function (reason) {
                         console.log("Failed to initialize the NfcPlugin " + reason);
@@ -28,16 +27,6 @@ function handleNfcFromIntentFilter() {
 }
 
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
-console.log("Execution test 1");
-try{
-    if(location.href.indexOf("/_error.html?") > -1)
-    {
-        localStorage.clear();
-    }
-}
-catch (e){
-    console.log(e);
-}
 
 var ndef = {
 
